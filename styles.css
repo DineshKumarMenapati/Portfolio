@@ -500,7 +500,7 @@ canvas{
 .project-box
 {
     width: auto;
-    height: 250px;
+    height: 290px;
 }
 
 #Achievements-tittle
@@ -525,64 +525,17 @@ canvas{
     width: 400px;
     height: 150px;
     position: relative;
-    opacity: 0;
+    opacity: 1;
     border-radius: 20px;
 
 }
 
-.achi-boxes
-{
-    animation: moveside 2s linear forwards;
-}
-
-.bottom-container
-{
-    top: 200px;
-}
-
-.achi-container::after
-{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 6px;
-    background: #fff;
-    top: 100%;
-}
-
-.achi-container::after
-{
-    animation: move-line 3s linear forwards;
-}
-
-@keyframes move-line {
-    0%
-    {
-        width: 0%;
-    }
-    100%
-    {
-        width: 100%;
-    }
-}
-
-@keyframes moveside {
-    0%
-    {
-        opacity: 1;
-        transform: translateX(-30px);
-    }
-    100%
-    {
-        opacity: 1;
-        transform: translateX(0px)
-    }
-}
-
 #contact-me
 {
-    position: relative;
-    top: 230px;
+    font-family: 'Epilogue', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    padding: 3.6%;
 }
 
 #title-contact-me
@@ -610,6 +563,7 @@ canvas{
     font-family: 'Epilogue', sans-serif;
     font-size: 13px;
 }
+
 .circle
 {
     width: 10px;
@@ -663,7 +617,8 @@ canvas{
     box-shadow: 0 0 4px #fff, 0 0 10px #FF007F, 0 0 15px #FF007F, 0 0 20px #FF007F, 0 0 25px #FF007F, 0 0 30px #FF007F, 0 0 35px #FF007F;
 
 }
-.project-title
+
+.box-title
 {
     font-family: 'Epilogue', sans-serif;
     font-size: 20px;
@@ -672,6 +627,7 @@ canvas{
     left: 15px;
     margin-bottom: 15px;
 }
+
 .project-tags
 {
     position: relative;
@@ -682,6 +638,11 @@ canvas{
     justify-content: space-evenly;
     font-family: 'Epilogue', sans-serif;
     font-size: 11px;
+}
+
+.project-descrip
+{
+    font-family: 'Epilogue', sans-serif;
 }
 
 .flex
@@ -701,6 +662,7 @@ canvas{
     width: 18px;
     height: auto;
 }
+
 .read-more
 {
     float: right;
@@ -708,3 +670,98 @@ canvas{
     top: 35%;
     right: 6%;
 }
+
+
+.contact
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size:40px;
+    font-family: "Epilogue", sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 3%;
+}
+
+
+form .input-box
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box .input-feild{
+    width: 48.5%;
+}
+.feild .input-item
+{
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: 2px solid rgb(70, 64, 64);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgb(70, 64, 64);
+    margin: 12px 0;
+}
+
+.feild.error .input-item
+{
+    border-color: #d93025;
+}
+
+.feild .input-item::placeholder
+{
+    color: rgba(0, 0, 0, 0.7);
+}
+
+form .textarea-feild .input-item{
+    resize: none;
+}
+
+form button
+{
+    padding: 12px 32px;
+    background: rgb(70, 64, 64);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(70, 64, 64);
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .5s;
+}
+
+form button:hover{
+    box-shadow: none;
+}
+
+
+
+
+.feild .error-txt
+{
+    font-size: 14.5px;
+    color: #d93025;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+.feild.error .error-txt
+{
+   display: block;
+}
+
+form .text-feild .error-txt
+{
+    margin-top: -10px;
+}
+
