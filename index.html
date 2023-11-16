@@ -22,9 +22,8 @@
                     <div class="logo">Dinesh!</div>
                     <ul>
                         <li><a href="#home-page" class = "nav-link active" >Home</a></li>
-                        <li><a href="about-section" class = "nav-link" >Projects</a></li>
-                        <li><a href="#" class = "nav-link" >Technologies</a></li>
-                        <li><a href="#" class = "nav-link" >Contact</a></li>
+                        <li><a href="#projects-section" class = "nav-link" >Projects</a></li>
+                        <li><a href="#contact-section" class = "nav-link" >Contact</a></li>
                     </ul>
                 </nav>
                 <div class="hero">
@@ -33,8 +32,7 @@
                             <h3>Hey!👋</h3>
                             <div id="animated-text"> <span class="first-text"></span> </div>
                             <div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa magni facilis fuga vel, itaque nam!
+                                <p>   I'm an undergrad at NIT Puducherry (20–24). This website showcases my projects and experiences that reflect my commitment to learning. Thank you for visiting!
                                 </p>
                             </div>
                             <div class="socials-btn">
@@ -54,7 +52,7 @@
                             <div class="projects-boxes">
                                 
                                 <div class = "project-box glass">
-                                    <span class="project-title">Personal Portfolio</span>
+                                    <span class="box-title">Personal Portfolio</span>
                                     <span class="status"><div class="circle green"></div> <p>Completed</p></span>
                                     <div class="project-tags">
                                         <div> <div class="circle orange flex "></div>HTML</div>
@@ -62,13 +60,13 @@
                                         <div> <div class="circle yellow flex "></div>Java Script</div>
                                     </div>
                                     <p class="project-descrip">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, ipsum mollitia ab ipsam eaque, consequatur at eligendi, tempora quae quo laudantium. Perspiciatis ipsam dolorem excepturi, soluta ex quis perferendis pariatur!
+                                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vitae iste sapiente reiciendis dicta similique.
                                     </p>
                                     <button class="read-more btn">Read More >></button>
                                 </div>
                                 
                                 <div class = "project-box glass">
-                                    <span class="project-title">ANN based MPPT for TEG</span>
+                                    <span class="box-title">ANN based MPPT for TEG</span>
                                     <span class="status"><div class="circle voilet"></div> <p>On-going</p></span>
                                     <div class="project-tags">
                                         <div> <div class="circle red flex "></div>Artificial Neural Networks(ANN)</div>
@@ -82,7 +80,7 @@
 
 
                                 <div class = "project-box glass">
-                                    <span class="project-title">Change Detection</span>
+                                    <span class="box-title">Change Detection</span>
                                     <span class="status"><div class="circle green"></div> <p>Completed</p></span>
                                     <div class="project-tags">
                                         <div> <div class="circle red flex "></div>Deep Learning</div>
@@ -96,7 +94,7 @@
                                 </div>
                                 
                                 <div class = "project-box glass">
-                                    <span class="project-title">Diabetis Prediction</span>
+                                    <span class="box-title">Diabetis Prediction</span>
                                     <span class="status"><div class="circle green"></div> <p>Completed</p></span>
                                     <div class="project-tags">
                                         <div> <div class="circle red flex "></div>Machine Learning</div>
@@ -113,21 +111,42 @@
                     </div>
                 </section>
 
-                <!-- Technologies -->
-                <section class="Achievements-sec">
+                 <!-- contact me -->
 
-                    <p id="Achievements-tittle">Achievements 🎖️</p>
 
-                   <div class="achi-container">
-                    <div class="achi-boxes glass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptas pariatur obcaecati consequuntur numquam quas laborum expedita ut, sapiente optio?</div>
-                    <div class="achi-boxes bottom-container glass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptas pariatur obcaecati consequuntur numquam quas laborum expedita ut, sapiente optio?</div>
-                    <div class="achi-boxes glass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptas pariatur obcaecati consequuntur numquam quas laborum expedita ut, sapiente optio?</div>
-                    <div class="achi-boxes bottom-container glass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptas pariatur obcaecati consequuntur numquam quas laborum expedita ut, sapiente optio?</div>
-                   </div> 
-                </section>
+                <section class="contact" id="contact-section">
+                    <h2>Contact Me! ✉️</h2>
 
-                <section id="contact-me">
-                    <h3 id="title-contact-me">Contact Me ✉️</h3>
+                    <form action="#" class="">
+                        <div class="input-box">
+                            
+                            <div class="input-feild feild">
+                                    <input type="text" placeholder="Full Name" id="name" class="input-item" autocomplete="off">
+                                    <div class="error-txt">Full Name can't be blank</div>
+                            </div>
+
+                            <div class="input-feild feild">
+                                <input type="text" placeholder="Email Address" id="email" class="input-item" autocomplete="off">
+                                <div class="error-txt email">Email Address can't be blank</div>
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <div class="input-feild feild">
+                                <input type="text" placeholder="Subject" id="subject" class="input-item" autocomplete="off">
+                                <div class="error-txt">Subject can't be blank</div>
+                            </div>
+                        </div>
+
+                        <div class="textarea-feild feild">
+                            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="input-item" autocomplete="off"></textarea>
+                            <div class="error-txt">Message can't be blank</div>
+                        </div>
+
+                        <button type="submit">Send Message</button>
+
+                    </form>
                 </section>
 
             </div>
@@ -137,6 +156,8 @@
     <!-- javascript -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src = "script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- javascript -->
 
     
