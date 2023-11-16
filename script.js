@@ -34,7 +34,7 @@ let run = function()
         }
     }
 
-    t = t + 0.080;
+    t = t + 0.070;
     window.requestAnimationFrame(run)
 }
 
@@ -90,6 +90,112 @@ var typed = new Typed(".first-text", { strings: ["I'm Dinesh", "I'm a front-end 
 // )
 
 
+const form = document.querySelector('form');
+const fullName = document.getElementById("name");
+const subject = document.getElementById("subject");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
 
+function sendEmail()
+{
 
+    const bodyMessage = `Full Name: ${fullName.value} <br> Email: ${email.value} <br>
+    Message: ${message.value}`;
+
+    Email.send({
+        SecureToken : "3301c64f-4505-4b0f-bd67-7322e76ca56f",
+        To : 'dineshmenapati2002@gmail.com',
+        From : "dineshmenapati2002@gmail.com",
+        Subject : subject.value,
+        Body : bodyMessage
+    }).then(
+      message => 
+      {
+        if(message == "OK")
+        {
+            Swal.fire({
+                title: "Success!",
+                text: "Message sent successfully!",
+                icon: "success"
+              });
+        }
+      }
+    );
+}
+
+function checkInputs()
+{
+    const items = document.querySelectorAll(".input-item");
+
+    for(const item of items)
+    {
+        if(item.value == "")
+        {
+            item.classList.add("error");
+            item.parentElement.classList.add("error");
+        }
+
+        if(items[1].value != "")
+        {
+            checkEmail();
+        }
+
+        items[1].addEventListener("keyup", () =>{
+            checkEmail();
+        })
+
+        item.addEventListener("keyup", () =>
+        {
+            if(item.value != "")
+            {
+                item.classList.remove("error");
+                item.parentElement.classList.remove("error");
+            }
+            else
+            {
+                item.classList.add("error");
+                item.parentElement.classList.add("error");
+            }
+        })
+    }
+}
+
+function checkEmail()
+{
+    const emailRegex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/ 
+
+    const errorTXTEmail = document.querySelector(".error-txt.email")
+
+    if(!email.value.match(emailRegex))
+    {
+        email.classList.add("error");
+        email.parentElement.classList.add("error");
+
+        if(email.value != "")
+        {
+            errorTXTEmail.innerText = "Enter a valid email address";
+        }
+        else
+        {
+            errorTXTEmail.innerText = "Email Address can't be blank"
+        }
+    }
+    else{
+        email.classList.remove("error");
+        email.parentElement.classList.remove("error");
+    }
+}
+
+form.addEventListener("submit", (e) =>
+{
+    e.preventDefault();
+    checkInputs();
+
+    if(!fullName.classList.contains("error") && !email.classList.contains("error") && !message.classList.contains("error") && !subject.classList.contains("error"))
+    {
+        sendEmail();
+
+        form.reset();
+    }
+});
 
